@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yasmine Holtz | Digital Marketing Professional</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0d14;
+  --bg2: #13131f;
+  --bg3: #1a1a2a;
+  --lavender: #9b93f0;
+  --lavender-light: #c4bff7;
+  --lavender-dim: #3d3870;
+  --lavender-glow: rgba(155,147,240,0.12);
+  --white: #ffffff;
+  --off-white: #e8e6f0;
+  --muted: #8888aa;
+  --border: rgba(155,147,240,0.2);
+  --border-light: rgba(255,255,255,0.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--off-white);font-size:16px;line-height:1.6;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bottom:0.5px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:64px;backdrop-filter:blur(12px);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--white);letter-spacing:0.04em;}
+.nav-logo span{color:var(--lavender);font-style:italic;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{text-decoration:none;font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--lavender);}
+
+/* HERO */
+#about{min-height:92vh;display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;max-width:100%;padding:0;}
+.hero-text{padding:8rem 6% 6rem 6%;display:flex;flex-direction:column;justify-content:center;border-right:0.5px solid var(--border);}
+.hero-eyebrow{font-size:11px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--lavender);margin-bottom:1.5rem;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:0.5px;background:var(--lavender);}
+.hero-name{font-family:'Playfair Display',serif;font-size:72px;font-weight:700;line-height:1.0;color:var(--white);margin-bottom:0.5rem;letter-spacing:-0.01em;}
+.hero-name em{color:var(--lavender);font-style:italic;display:block;}
+.hero-tagline{font-size:13px;color:var(--muted);letter-spacing:0.08em;margin-bottom:2.5rem;font-weight:400;text-transform:uppercase;}
+.hero-bio{font-size:15px;color:var(--muted);line-height:1.9;max-width:480px;margin-bottom:3rem;font-weight:300;}
+.hero-actions{display:flex;gap:14px;align-items:center;}
+.btn-primary{display:inline-block;padding:12px 32px;background:var(--lavender);color:var(--bg);text-decoration:none;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:background 0.2s;}
+.btn-primary:hover{background:var(--lavender-light);}
+.btn-secondary{display:inline-block;padding:12px 32px;border:0.5px solid var(--border);color:var(--lavender);text-decoration:none;font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;transition:border-color 0.2s,color 0.2s;}
+.btn-secondary:hover{border-color:var(--lavender);color:var(--lavender-light);}
+
+.hero-visual{position:relative;overflow:hidden;background:var(--bg2);}
+.hero-photo{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(20%) contrast(1.05);opacity:0.9;}
+.hero-overlay{position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(transparent,var(--bg));}
+.hero-stat-bar{position:absolute;bottom:2rem;left:2rem;right:2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
+.hero-stat{background:rgba(13,13,20,0.85);padding:14px 16px;backdrop-filter:blur(8px);}
+.hero-stat-num{font-family:'Playfair Display',serif;font-size:24px;color:var(--lavender);font-weight:700;line-height:1;}
+.hero-stat-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:3px;}
+
+/* SECTIONS */
+.section-wrap{padding:6rem 6%;max-width:100%;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-header{display:flex;align-items:center;gap:20px;margin-bottom:3.5rem;}
+.section-num{font-family:'Playfair Display',serif;font-size:48px;color:var(--lavender-dim);font-weight:700;line-height:1;opacity:0.5;}
+.section-title{font-size:11px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--lavender);}
+.section-line{flex:1;height:0.5px;background:var(--border);}
+
+/* SKILLS */
+#skills{background:var(--bg2);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;background:var(--border);}
+.skill-item{background:var(--bg2);padding:16px 20px;font-size:13px;color:var(--off-white);font-weight:300;letter-spacing:0.02em;transition:background 0.2s,color 0.2s;cursor:default;}
+.skill-item:hover{background:var(--lavender-glow);color:var(--lavender-light);}
+.skill-item::before{content:'→';color:var(--lavender);margin-right:10px;font-size:12px;}
+
+/* EXPERIENCE */
+#experience{background:var(--bg);}
+.exp-item{display:grid;grid-template-columns:200px 1fr;border-bottom:0.5px solid var(--border-light);padding:2.5rem 0;gap:3rem;transition:background 0.2s;}
+.exp-item:first-child{border-top:0.5px solid var(--border-light);}
+.exp-item:hover{background:var(--lavender-glow);}
+.exp-meta{padding-left:0;}
+.exp-date{font-size:11px;color:var(--lavender);letter-spacing:0.1em;margin-bottom:8px;text-transform:uppercase;}
+.exp-company{font-size:14px;font-weight:500;color:var(--off-white);margin-bottom:4px;}
+.exp-location{font-size:12px;color:var(--muted);}
+.exp-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--white);margin-bottom:10px;font-weight:400;}
+.exp-desc{font-size:14px;color:var(--muted);line-height:1.8;font-weight:300;}
+
+/* PROJECTS */
+#projects{background:var(--bg2);}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1px;background:var(--border);}
+.proj-card{background:var(--bg2);padding:2rem;transition:background 0.2s;display:flex;flex-direction:column;}
+.proj-card:hover{background:var(--bg3);}
+.proj-num{font-family:'Playfair Display',serif;font-size:36px;color:var(--lavender-dim);font-weight:700;margin-bottom:1rem;opacity:0.4;}
+.proj-tag{display:inline-block;border:0.5px solid var(--lavender-dim);color:var(--lavender);font-size:10px;padding:3px 10px;margin-bottom:14px;letter-spacing:0.1em;text-transform:uppercase;}
+.proj-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--white);margin-bottom:4px;font-weight:400;}
+.proj-sub{font-size:11px;color:var(--muted);margin-bottom:12px;letter-spacing:0.05em;}
+.proj-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:16px;flex:1;font-weight:300;}
+.proj-stats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
+.proj-stat{font-size:11px;color:var(--lavender);border:0.5px solid var(--lavender-dim);padding:3px 10px;letter-spacing:0.05em;}
+.proj-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;}
+.proj-link{font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;border-bottom:0.5px solid var(--border);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
+.proj-link:hover{color:var(--lavender);border-color:var(--lavender);}
+
+/* CONTACT */
+#contact{background:var(--bg);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
+.contact-heading{font-family:'Playfair Display',serif;font-size:52px;font-weight:400;line-height:1.1;color:var(--white);margin-bottom:1.5rem;}
+.contact-heading em{color:var(--lavender);font-style:italic;}
+.contact-sub{font-size:14px;color:var(--muted);line-height:1.8;font-weight:300;}
+.contact-details{display:flex;flex-direction:column;gap:0;border:0.5px solid var(--border);}
+.contact-row{display:flex;align-items:center;gap:16px;padding:18px 20px;border-bottom:0.5px solid var(--border);transition:background 0.2s;}
+.contact-row:last-child{border-bottom:none;}
+.contact-row:hover{background:var(--lavender-glow);}
+.contact-label{font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:var(--muted);min-width:70px;}
+.contact-val{font-size:14px;color:var(--lavender-light);text-decoration:none;font-weight:400;}
+.contact-val:hover{color:var(--lavender);}
+
+/* FOOTER */
+footer{padding:2rem 6%;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:16px;color:var(--muted);}
+.footer-copy{font-size:11px;color:var(--muted);letter-spacing:0.08em;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.fade-up{opacity:0;animation:fadeUp 0.7s ease forwards;}
+.d1{animation-delay:0.1s;}.d2{animation-delay:0.25s;}.d3{animation-delay:0.4s;}.d4{animation-delay:0.55s;}
+
+@media(max-width:768px){
+  #about{grid-template-columns:1fr;min-height:auto;}
+  .hero-text{padding:5rem 6% 3rem;}
+  .hero-name{font-size:48px;}
+  .hero-visual{height:400px;}
+  .exp-item{grid-template-columns:1fr;gap:0.75rem;}
+  .contact-grid{grid-template-columns:1fr;gap:3rem;}
+  nav{padding:0 5%;}
+  .nav-links{gap:1.5rem;}
+  .section-wrap{padding:4rem 5%;}
+  footer{flex-direction:column;gap:8px;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Yasmine <span>Holtz</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <div class="hero-text">
+    <div class="hero-eyebrow fade-up d1">Digital Marketing Professional</div>
+    <h1 class="hero-name fade-up d2">Yasmine<em>Holtz.</em></h1>
+    <p class="hero-tagline fade-up d3">Social Media &nbsp;·&nbsp; Events &nbsp;·&nbsp; Brand Strategy</p>
+    <p class="hero-bio fade-up d3">Recent college graduate with two Associate degrees in Digital Media and Business Administration from Mt. San Jacinto College, Presidential Honor Roll. I build brands, grow audiences, and create marketing that actually works. I've done it for real clients across music, wellness, hospitality, and media.</p>
+    <div class="hero-actions fade-up d4">
+      <a href="#projects" class="btn-primary">View my work</a>
+      <a href="#contact" class="btn-secondary">Get in touch</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="YazHeadshot.png" alt="Yasmine Holtz" class="hero-photo">
+    <div class="hero-overlay"></div>
+    <div class="hero-stat-bar">
+      <div class="hero-stat"><div class="hero-stat-num">4+</div><div class="hero-stat-label">Years experience</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">5+</div><div class="hero-stat-label">Brands worked with</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">20k+</div><div class="hero-stat-label">Ad reach</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-wrap" id="skills" style="background:var(--bg2);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <div class="section-title">Core skills</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-item">Social media management</div>
+      <div class="skill-item">Meta ads & paid advertising</div>
+      <div class="skill-item">Content creation & scheduling</div>
+      <div class="skill-item">Email marketing</div>
+      <div class="skill-item">Website management</div>
+      <div class="skill-item">Wix & WordPress</div>
+      <div class="skill-item">Canva & graphic design</div>
+      <div class="skill-item">Video production & editing</div>
+      <div class="skill-item">Brand strategy</div>
+      <div class="skill-item">Event planning & coordination</div>
+      <div class="skill-item">Analytics & reporting</div>
+      <div class="skill-item">CRM management</div>
+      <div class="skill-item">Community engagement</div>
+      <div class="skill-item">Google Suite & Microsoft Office</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-wrap" id="experience">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div class="section-title">Work experience</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">2025 – 2026</div>
+          <div class="exp-company">Dream Cultivators</div>
+          <div class="exp-location">Remote</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-title">Digital Marketing Manager</div>
+          <div class="exp-desc">Managed the full digital marketing presence for a luxury women's wellness retreat brand. Built and executed Meta ad campaigns, designed automated email sequences and lead-gen funnels, wrote promotional copy, and produced a 60-second video ad campaign from concept to final edit.</div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">2021 – 2025</div>
+          <div class="exp-company">Wolf Wednesdays</div>
+          <div class="exp-location">Denver, CO</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-title">Founder & Social Media Director</div>
+          <div class="exp-desc">Built one of Denver's largest open mic series for hip-hop and R&B artists from the ground up with no existing audience or infrastructure. Independently managed all branding, social media, paid advertising, event logistics, vendor relationships, and sponsorship development over four years.</div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">2021 – 2023</div>
+          <div class="exp-company">Bright Future Media</div>
+          <div class="exp-location">Denver, CO</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-title">Social Media Manager</div>
+          <div class="exp-desc">Managed multi-platform social media presence for a Denver recording studio. Produced video and photo content, ran paid Meta ad campaigns for studio booking, and grew Instagram following by 40% while boosting average post engagement by 60% over one year.</div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">2022 – 2024</div>
+          <div class="exp-company">Denver Human Services</div>
+          <div class="exp-location">Denver, CO</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-title">Customer Service Agent</div>
+          <div class="exp-desc">Managed and tracked client cases using CRM systems. Supported community members navigating complex challenges and served as a trusted point of contact between clients and agency staff.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-wrap" id="projects" style="background:var(--bg2);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <div class="section-title">Projects & case studies</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="proj-card">
+        <div class="proj-num">01</div>
+        <span class="proj-tag">Event marketing</span>
+        <div class="proj-title">Wolf Wednesdays</div>
+        <div class="proj-sub">Denver, CO &nbsp;·&nbsp; 2021 – 2025</div>
+        <div class="proj-desc">Built a premier open mic platform from zero with no existing audience or infrastructure. Managed all branding, social media, advertising, and event operations independently for four years.</div>
+        <div class="proj-stats">
+          <span class="proj-stat">3,000+ followers yr 1</span>
+          <span class="proj-stat">15k+ impressions/event</span>
+          <span class="proj-stat">3+ sponsors</span>
+          <span class="proj-stat">100–150 per show</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.instagram.com/wolfwednesdays_/" target="_blank" class="proj-link">Instagram ↗</a>
+          <a href="https://www.jhazzy.com/wolfwednesdays" target="_blank" class="proj-link">Website ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-num">02</div>
+        <span class="proj-tag">Web & digital marketing</span>
+        <div class="proj-title">Mile High Minute</div>
+        <div class="proj-sub">Denver, CO &nbsp;·&nbsp; 2023 – 2024</div>
+        <div class="proj-desc">Designed and launched a full website for Denver's leading hip-hop blog. Developed paid ad strategy, managed ongoing content, and streamlined client onboarding processes.</div>
+        <div class="proj-stats">
+          <span class="proj-stat">3,500+ monthly visitors</span>
+          <span class="proj-stat">20k+ ad reach</span>
+          <span class="proj-stat">30% faster onboarding</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.instagram.com/milehighminute.co/" target="_blank" class="proj-link">Instagram ↗</a>
+          <a href="https://www.milehighminute.com" target="_blank" class="proj-link">Website ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-num">03</div>
+        <span class="proj-tag">Social media growth</span>
+        <div class="proj-title">Bright Future Media</div>
+        <div class="proj-sub">Denver, CO &nbsp;·&nbsp; 2021 – 2023</div>
+        <div class="proj-desc">Managed social media strategy and content production for a recording studio. Ran paid campaigns for studio booking and created video and photo content that drove significant engagement growth.</div>
+        <div class="proj-stats">
+          <span class="proj-stat">+40% Instagram growth</span>
+          <span class="proj-stat">+60% engagement</span>
+          <span class="proj-stat">100+ new inquiries</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.instagram.com/bright.everything/" target="_blank" class="proj-link">Instagram ↗</a>
+          <a href="https://brighteverything.com" target="_blank" class="proj-link">Website ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-num">04</div>
+        <span class="proj-tag">Content production</span>
+        <div class="proj-title">Wilson Creek Winery</div>
+        <div class="proj-sub">Temecula, CA &nbsp;·&nbsp; 2025</div>
+        <div class="proj-desc">Freelance content producer for a family-owned Temecula winery. Created shot lists, led on-camera interviews, filmed B-roll, and developed the full social media rollout strategy for a 7-episode branded content series.</div>
+        <div class="proj-stats">
+          <span class="proj-stat">7-episode series</span>
+          <span class="proj-stat">Full rollout strategy</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.instagram.com/wilson_creek_winery/" target="_blank" class="proj-link">Instagram ↗</a>
+          <a href="https://www.wilsoncreekwinery.com" target="_blank" class="proj-link">Website ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-num">05</div>
+        <span class="proj-tag">Digital marketing</span>
+        <div class="proj-title">Dream Cultivators</div>
+        <div class="proj-sub">2024 – 2025</div>
+        <div class="proj-desc">Built and managed the full digital marketing presence for a luxury women's wellness retreat brand. Handled Meta ads, email funnels, social content, promotional copywriting, and video ad production.</div>
+        <div class="proj-stats">
+          <span class="proj-stat">Full ad funnel</span>
+          <span class="proj-stat">Email automation</span>
+          <span class="proj-stat">Video ad production</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.instagram.com/lashaunnspiveyangeletti/" target="_blank" class="proj-link">Instagram ↗</a>
+          <a href="https://dreamcultivator.com" target="_blank" class="proj-link">Website ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section-wrap" id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <div class="section-title">Contact</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <h2 class="contact-heading">Let's work<br><em>together.</em></h2>
+        <p class="contact-sub">Open to full-time roles, freelance projects, and opportunities in digital marketing, social media, and brand strategy. Based in Temecula, CA and open to Denver, CO.</p>
+      </div>
+      <div class="contact-details">
+        <div class="contact-row">
+          <span class="contact-label">Email</span>
+          <a href="mailto:contact@jhazzy.com" class="contact-val">contact@jhazzy.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Phone</span>
+          <a href="tel:3102806315" class="contact-val">(310) 280-6315</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://linkedin.com/in/jhazzywolf" target="_blank" class="contact-val">linkedin.com/in/jhazzywolf</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Instagram</span>
+          <a href="https://www.instagram.com/jhazzywolf" target="_blank" class="contact-val">@jhazzywolf</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Yasmine Holtz</div>
+  <div class="footer-copy">© 2026 &nbsp;·&nbsp; Digital Marketing Professional &nbsp;·&nbsp; Temecula, CA</div>
+</footer>
+
+</body>
+</html>
