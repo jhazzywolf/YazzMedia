@@ -58,4 +58,240 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bott
 .exp-item:hover{background:var(--lavender-glow);}
 .exp-meta{padding-left:0;}
 .exp-date{font-size:11px;color:var(--lavender);letter-spacing:0.1em;margin-bottom:8px;text-transform:uppercase;}
-.exp-company{font-size
+.exp-company{font-size:14px;font-weight:500;color:var(--off-white);margin-bottom:4px;}
+.exp-location{font-size:12px;color:var(--muted);}
+.exp-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--white);margin-bottom:10px;font-weight:400;}
+.exp-desc{font-size:14px;color:var(--muted);line-height:1.8;font-weight:300;}
+.exp-desc ul{margin-left:1.2rem;margin-top:0.5rem;}
+.exp-desc li{margin-bottom:0.5rem;}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;}
+.proj-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:4px;padding:2rem;transition:border-color 0.2s,background 0.2s;display:flex;flex-direction:column;}
+.proj-card:hover{border-color:var(--lavender);background:var(--bg3);}
+.proj-tag{display:inline-block;background:var(--lavender-glow);color:var(--lavender);font-size:10px;padding:4px 12px;border-radius:20px;margin-bottom:14px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;align-self:flex-start;}
+.proj-title{font-family:'Playfair Display',serif;font-size:24px;color:var(--white);margin-bottom:6px;font-weight:400;}
+.proj-sub{font-size:12px;color:var(--muted);margin-bottom:14px;letter-spacing:0.05em;}
+.proj-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;flex:1;font-weight:300;}
+.proj-stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;}
+.proj-stat{background:transparent;border:0.5px solid var(--lavender-dim);color:var(--lavender);font-size:11px;font-weight:400;padding:4px 10px;border-radius:20px;letter-spacing:0.04em;}
+.proj-links{display:flex;gap:12px;flex-wrap:wrap;}
+.proj-link{font-size:11px;color:var(--muted);text-decoration:none;border:0.5px solid var(--border);padding:6px 14px;border-radius:20px;letter-spacing:0.08em;text-transform:uppercase;transition:background 0.2s,color 0.2s,border-color 0.2s;}
+.proj-link:hover{background:var(--lavender-glow);color:var(--lavender);border-color:var(--lavender);}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.fade-up{opacity:0;animation:fadeUp 0.7s ease forwards;}
+.d1{animation-delay:0.1s;}.d2{animation-delay:0.25s;}.d3{animation-delay:0.4s;}.d4{animation-delay:0.55s;}
+
+@media(max-width:768px){
+  .exp-item{grid-template-columns:1fr;gap:0.75rem;}
+  .section-wrap{padding:4rem 5%;}
+  .nav-links { gap: 1rem; padding: 10px 0; }
+  .nav-links a { font-size: 10px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Yazz<span>Media</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="work.html">Work Examples</a></li>
+    <li><a href="hireme.html">Hire Me</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="section-wrap fade-up d1">
+  <div class="section-inner">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem;">
+      <div style="flex:1;">
+        <h1 style="font-family:'Playfair Display',serif; font-size:48px; color:var(--white); margin-bottom:0.5rem; font-weight:400;">Professional <em style="color:var(--lavender); font-style:italic;">Overview.</em></h1>
+        <p style="font-size:14px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase;">Skills, Experience & Education</p>
+      </div>
+      <div style="display: flex; gap: 14px;">
+        <a href="Portfolio.pdf" target="_blank" class="btn-secondary">View PDF</a>
+        <a href="Portfolio.pdf" download class="btn-primary">Download PDF</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-wrap fade-up d2" style="background:var(--bg2);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-title">Core Skills</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-dot"></span>Social Media Management</div>
+      <div class="skill-item"><span class="skill-dot"></span>Meta Ads & Paid Advertising</div>
+      <div class="skill-item"><span class="skill-dot"></span>Content Creation & Scheduling</div>
+      <div class="skill-item"><span class="skill-dot"></span>Email Marketing & Funnels</div>
+      <div class="skill-item"><span class="skill-dot"></span>Website Management</div>
+      <div class="skill-item"><span class="skill-dot"></span>Wix & WordPress</div>
+      <div class="skill-item"><span class="skill-dot"></span>Canva & Graphic Design</div>
+      <div class="skill-item"><span class="skill-dot"></span>Video Production & Editing</div>
+      <div class="skill-item"><span class="skill-dot"></span>Brand Strategy</div>
+      <div class="skill-item"><span class="skill-dot"></span>Event Logistics & Promotions</div>
+      <div class="skill-item"><span class="skill-dot"></span>CRM Management & Tracking</div>
+      <div class="skill-item"><span class="skill-dot"></span>Client Relationship Building</div>
+      <div class="skill-item"><span class="skill-dot"></span>Photography</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-wrap fade-up d3">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-title">Experience & Projects</div>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="projects-grid">
+      
+      <div class="proj-card">
+        <span class="proj-tag">Web Design & Automation</span>
+        <div class="proj-title">Mile High Minute</div>
+        <div class="proj-sub">Denver, CO &nbsp;·&nbsp; 2023 – 2024</div>
+        <div class="proj-desc">Designed and launched a full WordPress website for Denver's leading hip-hop and sports blog. Developed a custom client onboarding flow with integrated forms to collect project information and process payments seamlessly.</div>
+        <div class="proj-stats">
+          <span class="proj-stat">Custom Signup Flow</span>
+          <span class="proj-stat">Payment Integration</span>
+          <span class="proj-stat">Responsive UI/UX</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.instagram.com/milehighminute.co/" target="_blank" class="proj-link">Instagram ↗</a>
+          <a href="https://www.milehighminute.com" target="_blank" class="proj-link">Website ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <span class="proj-tag">Event Marketing</span>
+        <div class="proj-title">Wolf Wednesdays</div>
+        <div class="proj-sub">Denver, CO &nbsp;·&nbsp; 2021 – 2025</div>
+        <div class="proj-desc">Built a premier open mic platform from zero with no existing audience or infrastructure. Managed all branding, social media, advertising, and event operations independently for four years.</div>
+        <div class="proj-stats">
+          <span class="proj-stat">3,000+ Followers Yr 1</span>
+          <span class="proj-stat">15k+ Impressions/Event</span>
+          <span class="proj-stat">3+ Sponsors</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.instagram.com/wolfwednesdays_/" target="_blank" class="proj-link">Instagram ↗</a>
+          <a href="https://www.jhazzy.com/wolfwednesdays" target="_blank" class="proj-link">Website ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <span class="proj-tag">Digital Funnels</span>
+        <div class="proj-title">Dream Cultivators</div>
+        <div class="proj-sub">Remote &nbsp;·&nbsp; 2025 – 2026</div>
+        <div class="proj-desc">Built and managed the full digital marketing presence for a luxury women's wellness retreat brand. Handled Meta ads, email nurture funnels, social content, and video ad production.</div>
+        <div class="proj-stats">
+          <span class="proj-stat">Full Ad Funnel</span>
+          <span class="proj-stat">Email Automation</span>
+          <span class="proj-stat">Video Ad Production</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.instagram.com/lashaunnspiveyangeletti/" target="_blank" class="proj-link">Instagram ↗</a>
+          <a href="https://dreamcultivator.com" target="_blank" class="proj-link">Website ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <span class="proj-tag">Content Production</span>
+        <div class="proj-title">Wilson Creek Winery</div>
+        <div class="proj-sub">Temecula, CA &nbsp;·&nbsp; 2025</div>
+        <div class="proj-desc">Freelance content producer for a family-owned Temecula winery. Created shot lists, led on-camera interviews, filmed B-roll, and developed the full social media rollout strategy.</div>
+        <div class="proj-stats">
+          <span class="proj-stat">7-Episode Series</span>
+          <span class="proj-stat">Full Rollout Strategy</span>
+          <span class="proj-stat">Interview Direction</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.instagram.com/wilson_creek_winery/" target="_blank" class="proj-link">Instagram ↗</a>
+          <a href="https://www.wilsoncreekwinery.com" target="_blank" class="proj-link">Website ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <span class="proj-tag">Social Media Growth</span>
+        <div class="proj-title">Bright Future Media</div>
+        <div class="proj-sub">Denver, CO &nbsp;·&nbsp; 2021 – 2023</div>
+        <div class="proj-desc">Managed social media strategy and content production for a recording studio. Ran paid campaigns for studio booking and created content that drove significant engagement growth.</div>
+        <div class="proj-stats">
+          <span class="proj-stat">+40% IG Growth</span>
+          <span class="proj-stat">+60% Engagement</span>
+          <span class="proj-stat">100+ New Inquiries</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.instagram.com/bright.everything/" target="_blank" class="proj-link">Instagram ↗</a>
+          <a href="https://brighteverything.com" target="_blank" class="proj-link">Website ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section-wrap fade-up d4" style="background:var(--bg2);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-title">Education & Certifications</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="exp-list">
+      
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">Class of 2025 & 2026</div>
+          <div class="exp-company">Mt. San Jacinto College</div>
+          <div class="exp-location">Presidential Honor Roll</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-title">Degrees</div>
+          <div class="exp-desc">
+            <ul>
+              <li>Associate of Arts, Digital Media (2025)</li>
+              <li>Associate of Business Administration (2026)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">Certifications</div>
+          <div class="exp-company">Professional Development</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-title">Specializations</div>
+          <div class="exp-desc">
+            <ul>
+              <li>Certificate in Small Business Entrepreneurship</li>
+              <li>Certificate in Leadership and Logistics</li>
+              <li>Certificate in E-Commerce</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer style="padding: 3rem 6%; border-top: 0.5px solid var(--border); text-align: center; color: var(--muted);">
+  <div style="font-family:'Playfair Display',serif; font-size:18px; color:var(--white); margin-bottom: 0.5rem;">YazzMedia</div>
+  <p style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem;">
+    contact@jhazzy.com &nbsp;·&nbsp; 951-296-8664
+  </p>
+  <p style="font-size: 10px; color: #555; opacity: 0.6;">
+    © 2026 Yasmine Holtz. Designed & coded by Yasmine Holtz.
+  </p>
+</footer>
+
+</body>
+</html>
