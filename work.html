@@ -1,42 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Work | YazzMedia</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selected Works | YazzMedia</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0d14;
+  --bg2: #13131f;
+  --bg3: #1a1a2a;
+  --lavender: #9b93f0;
+  --lavender-light: #c4bff7;
+  --lavender-dim: #3d3870;
+  --lavender-glow: rgba(155,147,240,0.12);
+  --white: #ffffff;
+  --off-white: #e8e6f0;
+  --muted: #8888aa;
+  --border: rgba(155,147,240,0.2);
+  --border-light: rgba(255,255,255,0.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--off-white);font-size:16px;line-height:1.6;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bottom:0.5px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:64px;backdrop-filter:blur(12px);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--white);letter-spacing:0.04em;text-decoration:none;}
+.nav-logo span{color:var(--lavender);font-style:italic;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{text-decoration:none;font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover, .nav-links a.active{color:var(--lavender);}
+
+/* SECTIONS */
+.section-wrap{padding:6rem 6%;max-width:100%;}
+.section-inner{max-width:1100px;margin:0 auto;}
+
+/* GALLERY LAYOUT */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 4rem 3rem; /* 4rem vertical gap, 3rem horizontal */
+  margin-top: 3rem;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+}
+
+/* THE MEDIA FRAMES (Fixes the giant picture issue) */
+.work-media {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 0.5px solid var(--border);
+  background: var(--bg2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+  /* This prevents the media from getting taller than 600px */
+  max-height: 600px; 
+}
+
+.work-card:hover .work-media {
+  border-color: var(--lavender);
+}
+
+/* Ensures images and video scale down to fit the frame beautifully */
+.work-media img, .work-media video {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  object-fit: cover; /* keeps it looking full and sleek */
+  display: block;
+}
+
+/* TYPOGRAPHY FOR WORK DETAILS */
+.work-tag {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--lavender);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.work-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.work-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.fade-up{opacity:0;animation:fadeUp 0.7s ease forwards;}
+.d1{animation-delay:0.1s;}.d2{animation-delay:0.2s;}
+
+@media(max-width:768px){
+  .gallery-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .section-wrap{padding:4rem 5%;}
+  .work-media img, .work-media video { max-height: 450px; }
+}
+</style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">YAZZMEDIA<span>Marketing | Media | Branding</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="work.html" class="active">My Work</a></li>
-            <li><a href="hireme.html">Hire Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <main class="container">
-        <h1>Visual Work & Campaigns</h1>
-        <p>Explore some of my recent graphics, website builds, and campaign videos.</p>
-        <div class="grid-layout">
-            <div class="card">
-                <img src="R34.png" alt="Dream Cultivators Graphic" style="width:100%; border-radius:4px; margin-bottom:1rem;">
-                <h3>Dream Cultivators Campaign</h3>
-                <p>Targeted social media ad graphics and promotional captions aligned to the brand's luxury wellness identity.</p>
-            </div>
-            <div class="card">
-                <img src="R35.png" alt="Retreat Lead Gen" style="width:100%; border-radius:4px; margin-bottom:1rem;">
-                <h3>Wellness Retreat Lead Gen</h3>
-                <p>Graphic assets used to drive retreat registrations and capture email leads.</p>
-            </div>
-            <div class="card" style="display:flex; flex-direction:column; justify-content:center; align-items:center; background:#e0e0e0; min-height: 250px;">
-                <h3 style="color:#555;">[Video Reel Placeholder]</h3>
-                <p style="color:#777; text-align:center;">Short-form video content designed for high engagement.</p>
-            </div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Yazz<span>Media</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="work.html" class="active">Selected Works</a></li>
+    <li><a href="hireme.html">Hire Me</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="section-wrap fade-up d1">
+  <div class="section-inner">
+    
+    <div style="margin-bottom: 2rem; border-bottom: 0.5px solid var(--border); padding-bottom: 2rem;">
+      <h1 style="font-family:'Playfair Display',serif; font-size:48px; color:var(--white); margin-bottom:0.5rem; font-weight:400;">Campaigns & <em style="color:var(--lavender); font-style:italic;">Creative.</em></h1>
+      <p style="font-size:14px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase;">Visual Design, Ads & Video Production</p>
+    </div>
+
+    <div class="gallery-grid fade-up d2">
+      
+      <div class="work-card">
+        <div class="work-media">
+          <img src="R34.png" alt="Dream Cultivators Ad Graphic">
         </div>
-    </main>
+        <div class="work-details">
+          <span class="work-tag">Ad Graphic Design</span>
+          <h3 class="work-title">Luxury Wellness Identity</h3>
+          <p class="work-desc">Targeted social media ad graphics and promotional captions meticulously aligned to the brand's luxury wellness identity. Designed to stop the scroll and elevate brand perception.</p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-media">
+          <img src="R35.png" alt="Wellness Retreat Funnel">
+        </div>
+        <div class="work-details">
+          <span class="work-tag">Lead Generation</span>
+          <h3 class="work-title">Retreat Registration Funnel</h3>
+          <p class="work-desc">Strategic graphic assets deployed across social channels to drive retreat registrations and capture highly-qualified email leads into an automated nurture sequence.</p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-media">
+          <video controls preload="metadata">
+            <source src="R31.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="work-details">
+          <span class="work-tag">Video Ad Production</span>
+          <h3 class="work-title">Campaign Reel</h3>
+          <p class="work-desc">Short-form video content designed for high engagement. Filmed, edited, and optimized for native social media distribution to drive brand storytelling.</p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-media">
+          <video controls preload="metadata">
+            <source src="R32.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="work-details">
+          <span class="work-tag">Event Coverage</span>
+          <h3 class="work-title">Highlight Reel Production</h3>
+          <p class="work-desc">Capturing the energy, culture, and community of live events. Fast-paced, engaging edits used to build hype for future activations and secure brand sponsorships.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>
