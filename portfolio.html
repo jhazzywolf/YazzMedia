@@ -1,47 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | YazzMedia</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | YazzMedia</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .exp-item{display:grid;grid-template-columns:200px 1fr;border-bottom:0.5px solid var(--border-light);padding:2.5rem 0;gap:3rem;transition:background 0.2s;}
+  .exp-item:first-child{border-top:0.5px solid var(--border-light);}
+  .exp-item:hover{background:var(--lavender-glow);}
+  .exp-date{font-size:11px;color:var(--lavender);letter-spacing:0.1em;margin-bottom:8px;text-transform:uppercase;}
+  .exp-company{font-size:14px;font-weight:500;color:var(--off-white);margin-bottom:4px;}
+  .exp-location{font-size:12px;color:var(--muted);}
+  .exp-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--white);margin-bottom:10px;font-weight:400;}
+  .exp-desc{font-size:14px;color:var(--muted);line-height:1.8;font-weight:300;}
+</style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">YAZZMEDIA<span>Marketing | Media | Branding</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html" class="active">Portfolio</a></li>
-            <li><a href="work.html">My Work</a></li>
-            <li><a href="hireme.html">Hire Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <main class="container">
-        <h1>My Portfolio</h1>
-        <p>
-            <a href="work.html" class="btn" style="margin-right: 1rem;">View Visual Work</a>
-            <a href="Portfolio.pdf" class="btn" download>Download Full Resume PDF</a>
-        </p>
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px solid #ccc;">
-        <h2>Experience</h2>
-        <div class="card" style="margin-bottom: 2rem;">
-            <ul>
-                <li><strong>Digital Marketing Manager | Dream Cultivators:</strong> Built and managed the full digital marketing presence for a luxury women's wellness retreat brand.</li>
-                <li><strong>Founder & CEO | Wolf Wednesdays:</strong> Founded and built one of Denver's premier open mic series. Managed branding, marketing, Meta ads, and sponsorships.</li>
-                <li><strong>Freelance Content Producer | Wilson Creek Winery:</strong> Produced a 7-episode branded content series, including interviews and social media rollout.</li>
-                <li><strong>Freelance Digital Marketer | Mile High Minute:</strong> Designed and built a responsive WordPress website to improve user flow and online presence.</li>
-            </ul>
+<nav>
+  <a href="index.html" class="nav-logo">Yazz<span>Media</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="work.html">My Work</a></li>
+    <li><a href="hireme.html">Hire Me</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="section-wrap fade-up d1">
+  <div class="section-inner">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
+      <div class="section-header" style="margin-bottom:0; flex:1;">
+        <div class="section-num">02</div>
+        <div class="section-title">Experience & Skills</div>
+        <div class="section-line"></div>
+      </div>
+      <a href="Portfolio.pdf" class="btn-primary" download style="margin-left: 20px;">Download Resume PDF</a>
+    </div>
+
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">2025 – 2026</div>
+          <div class="exp-company">Dream Cultivators</div>
+          <div class="exp-location">Remote</div>
         </div>
-        <h2>Education & Certifications</h2>
-        <div class="card">
-            <ul>
-                <li>Associate of Arts, Digital Media | Mt. San Jacinto College</li>
-                <li>Associate of Science, Business Administration | Mt. San Jacinto College</li>
-                <li>Certificates: E-Commerce, Small Business/Entrepreneurship, Logistics Leadership, Public Relations</li>
-            </ul>
+        <div>
+          <div class="exp-title">Digital Marketing Manager</div>
+          <div class="exp-desc">Managed the full digital marketing presence for a luxury women's wellness retreat brand. Built and executed Meta ad campaigns, designed automated email sequences, wrote promotional copy, and produced video ad campaigns.</div>
         </div>
-    </main>
+      </div>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">2021 – 2025</div>
+          <div class="exp-company">Wolf Wednesdays</div>
+          <div class="exp-location">Denver, CO</div>
+        </div>
+        <div>
+          <div class="exp-title">Founder & CEO</div>
+          <div class="exp-desc">Built one of Denver's largest open mic series from the ground up. Independently managed all branding, social media, paid advertising, event logistics, vendor relationships, and sponsorship development.</div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">2025</div>
+          <div class="exp-company">Wilson Creek Winery</div>
+          <div class="exp-location">Temecula, CA</div>
+        </div>
+        <div>
+          <div class="exp-title">Freelance Content Producer</div>
+          <div class="exp-desc">Produced a 7-episode branded content series. Created shot lists, led on-camera interviews, filmed B-roll, and developed the full social media rollout strategy.</div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">Education</div>
+          <div class="exp-company">Mt. San Jacinto College</div>
+          <div class="exp-location">Honor Roll</div>
+        </div>
+        <div>
+          <div class="exp-title">Degrees & Certifications</div>
+          <div class="exp-desc">Associate of Arts in Digital Media. Associate of Business Administration. Certificates in E-Commerce, Small Business Entrepreneurship, Logistics Leadership, and Public Relations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
