@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YazzMedia | Marketing | Media | Branding</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YazzMedia | Home</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero-visual{position:relative;overflow:hidden;background:var(--bg2);}
+  .hero-photo{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(20%) contrast(1.05);opacity:0.9;}
+  .hero-overlay{position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(transparent,var(--bg));}
+</style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">YAZZMEDIA<span>Marketing | Media | Branding</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="work.html">My Work</a></li>
-            <li><a href="hireme.html">Hire Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <main class="container hero">
-        <div class="hero-content">
-            <h1>YazzMedia</h1>
-            <h2>MARKETING | MEDIA | BRANDING</h2>
-            <p>I build brands, grow audiences, and create marketing that actually works. Whether you need an elite web presence, a comprehensive social media strategy, or full-scale event production, I blend creativity with strategic execution to drive real growth.</p>
-            <a href="hireme.html" class="btn">View My Services</a>
-        </div>
-        <div class="hero-image">
-            <img src="YazHeadshot.png" alt="Yasmine Holtz Headshot">
-        </div>
-    </main>
+<nav>
+  <a href="index.html" class="nav-logo">Yazz<span>Media</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="work.html">My Work</a></li>
+    <li><a href="hireme.html">Hire Me</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero-split">
+  <div class="hero-text">
+    <div class="hero-eyebrow fade-up d1">Digital Marketing Professional</div>
+    <h1 class="hero-name fade-up d2">Yasmine<em>Holtz.</em></h1>
+    <p class="hero-tagline fade-up d3">Marketing &nbsp;·&nbsp; Media &nbsp;·&nbsp; Branding</p>
+    <p class="hero-bio fade-up d3">I build brands, grow audiences, and create marketing that actually works. Whether you need an elite web presence, a comprehensive social media strategy, or full-scale event production, I blend creativity with strategic execution.</p>
+    <div class="hero-actions fade-up d4">
+      <a href="hireme.html" class="btn-primary">View Services</a>
+      <a href="work.html" class="btn-secondary">See My Work</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="YazHeadshot.png" alt="Yasmine Holtz" class="hero-photo">
+    <div class="hero-overlay"></div>
+  </div>
+</section>
 </body>
 </html>
