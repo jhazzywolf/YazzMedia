@@ -54,3 +54,12 @@
 
 </body>
 </html>
+/* HERO LAYOUT RESTORATION */
+#about { min-height:92vh; display:grid; grid-template-columns:1fr 1fr; gap:0; align-items:stretch; max-width:100%; padding:0; }
+.hero-text { padding:8rem 6% 6rem 6%; display:flex; flex-direction:column; justify-content:center; border-right:0.5px solid var(--border); }
+.hero-visual { position:relative; overflow:hidden; background:var(--bg2); }
+.hero-photo { width:100%; height:100%; object-fit:cover; object-position:center top; filter:grayscale(20%) contrast(1.05); opacity:0.9; }
+
+/* NAVBAR RESTORATION */
+nav { height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 6%; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
