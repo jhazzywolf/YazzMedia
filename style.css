@@ -82,3 +82,23 @@ nav { position:sticky; top:0; z-index:100; background:rgba(13,13,20,0.92); borde
 .exp-location { font-size:12px; color:var(--muted); }
 .exp-title { font-family:'Playfair Display',serif; font-size:22px; color:var(--white); margin-bottom:10px; font-weight:400; }
 .exp-desc { font-size:14px; color:var(--muted); line-height:1.8; font-weight:300; }
+/* MOBILE NAVIGATION FIX */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 6%;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;       /* This forces the menu to stack */
+    justify-content: center; /* This keeps them centered */
+    gap: 1rem;            /* Tightens the space on mobile */
+  }
+
+  .nav-links a {
+    font-size: 10px;      /* Shrinks text slightly for mobile screens */
+  }
+}
