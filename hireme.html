@@ -1,50 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Me | YazzMedia</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | YazzMedia</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0d14;
+  --bg2: #13131f;
+  --bg3: #1a1a2a;
+  --lavender: #9b93f0;
+  --lavender-light: #c4bff7;
+  --lavender-dim: #3d3870;
+  --lavender-glow: rgba(155,147,240,0.12);
+  --white: #ffffff;
+  --off-white: #e8e6f0;
+  --muted: #8888aa;
+  --border: rgba(155,147,240,0.2);
+  --border-light: rgba(255,255,255,0.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--off-white);font-size:16px;line-height:1.6;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bottom:0.5px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:64px;backdrop-filter:blur(12px);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--white);letter-spacing:0.04em;text-decoration:none;}
+.nav-logo span{color:var(--lavender);font-style:italic;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{text-decoration:none;font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover, .nav-links a.active{color:var(--lavender);}
+
+/* BUTTONS */
+.btn-primary{display:inline-block;padding:14px 36px;background:var(--lavender);color:var(--bg);text-decoration:none;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:background 0.2s; border: 1px solid var(--lavender);}
+.btn-primary:hover{background:var(--lavender-light); border-color: var(--lavender-light);}
+
+/* SECTIONS */
+.section-wrap{padding:6rem 6%;max-width:100%;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-header{display:flex;align-items:center;gap:16px;margin-bottom:3.5rem;}
+.section-title{font-size:12px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--lavender);}
+.section-line{flex:1;height:0.5px;background:var(--border);}
+
+/* SERVICE CARDS */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: var(--bg);
+  border: 0.5px solid var(--border);
+  border-radius: 6px;
+  padding: 3rem 2.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  border-color: var(--lavender);
+  background: var(--lavender-glow);
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: var(--lavender-dim);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.service-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.service-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* CTA BANNER */
+.cta-banner {
+  background: linear-gradient(135deg, var(--bg2) 0%, rgba(155,147,240,0.05) 100%);
+  border: 0.5px solid var(--lavender-dim);
+  border-radius: 8px;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--lavender), transparent);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.fade-up{opacity:0;animation:fadeUp 0.7s ease forwards;}
+.d1{animation-delay:0.1s;}.d2{animation-delay:0.25s;}.d3{animation-delay:0.4s;}
+
+@media(max-width:768px){
+  .section-wrap{padding:4rem 5%;}
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card { padding: 2rem; }
+}
+</style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">YAZZMEDIA<span>Marketing | Media | Branding</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="work.html">My Work</a></li>
-            <li><a href="hireme.html" class="active">Hire Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <main class="container">
-        <h1>Work With YazzMedia</h1>
-        <p>Every brand has unique needs. I offer fully customized solutions designed to scale your business. Everything is custom-based—<strong>contact me for a free consultation.</strong></p>
-        <br>
-        <a href="contact.html" class="btn">Request Free Consultation</a>
-        <div class="grid-layout">
-            <div class="card">
-                <h3>Digital Marketing & Social Media</h3>
-                <p>Comprehensive social media management, content calendars, hashtag strategies, and targeted Meta ad campaigns designed to grow followers, boost engagement, and drive website traffic.</p>
-            </div>
-            <div class="card">
-                <h3>Brand Identity & Development</h3>
-                <p>Full brand audits, visual content templates, brand voice messaging guides, and cohesive visual strategies that make your brand stand out from day one.</p>
-            </div>
-            <div class="card">
-                <h3>Web Design & Sales Funnels</h3>
-                <p>Responsive website builds, link-in-bio optimization, automated email nurture sequences, and abandoned cart setups that turn passive visitors into loyal clients.</p>
-            </div>
-            <div class="card">
-                <h3>Event Production & Promotions</h3>
-                <p>End-to-end event logistics, digital promotions, community management, and professional sponsorship deck development to secure funding and brand partnerships.</p>
-            </div>
-            <div class="card">
-                <h3>Business Development & Admin</h3>
-                <p>CRM management, customer-to-customer (C2C) marketing, inbound/outbound client communications, A/B testing, and streamlined operational support.</p>
-            </div>
-        </div>
-    </main>
+
+<nav>
+  <a href="index.html" class="nav-logo">Yazz<span>Media</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="work.html">Work Examples</a></li>
+    <li><a href="hireme.html" class="active">Hire Me</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="section-wrap fade-up d1">
+  <div class="section-inner" style="max-width: 800px; text-align: center; padding-top: 2rem;">
+    <h1 style="font-family:'Playfair Display',serif; font-size:56px; color:var(--white); margin-bottom:1.5rem; font-weight:400; line-height: 1.1;">Let's build something <em style="color:var(--lavender); font-style:italic;">exceptional.</em></h1>
+    <p style="font-size:16px; color:var(--muted); line-height:1.9; font-weight:300;">Every brand has a unique pulse. I don't believe in one-size-fits-all packages. I offer fully customized marketing, media, and branding solutions designed specifically to scale your business, engage your audience, and drive real revenue. Whether you need a complete brand overhaul, a high-converting website, or a viral event, we build the strategy around your goals.</p>
+  </div>
+</div>
+
+<div class="section-wrap fade-up d2" style="background:var(--bg2);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-title">Areas of Expertise</div>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="services-grid">
+      
+      <div class="service-card">
+        <div class="service-icon">01</div>
+        <h3 class="service-title">Digital Marketing & Social Media</h3>
+        <p class="service-desc">Comprehensive social media management tailored to your audience. From curated content calendars to highly-targeted Meta ad campaigns designed to grow your following, boost organic engagement, and drive high-quality traffic to your site.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">02</div>
+        <h3 class="service-title">Brand Identity & Development</h3>
+        <p class="service-desc">Establish a brand that commands attention. I conduct full brand audits, build cohesive messaging guides, and design visual content templates so your brand looks, sounds, and feels elite across every single touchpoint.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">03</div>
+        <h3 class="service-title">Web Design & Sales Funnels</h3>
+        <p class="service-desc">Turn passive scrollers into loyal clients. I design responsive, visually stunning websites and build automated backend funnels—including lead-capture pages, email nurture sequences, and abandoned cart flows that generate revenue while you sleep.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">04</div>
+        <h3 class="service-title">Event Production & Promotions</h3>
+        <p class="service-desc">Bring your brand to life in the real world. I handle end-to-end event logistics, digital promotional campaigns, on-the-ground community management, and the development of professional sponsorship decks to secure premium funding.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">05</div>
+        <h3 class="service-title">Business Development & Admin</h3>
+        <p class="service-desc">The operational backbone of scaling a brand. I provide CRM management, lead tracking, streamlined client communications, inbound/outbound support, and the administrative structure needed to keep your business running flawlessly.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section-wrap fade-up d3">
+  <div class="section-inner">
+    <div class="cta-banner">
+      <h2 style="font-family:'Playfair Display',serif; font-size:40px; color:var(--white); margin-bottom:1rem; font-weight:400;">Ready to scale your brand?</h2>
+      <p style="font-size:15px; color:var(--muted); margin-bottom: 2.5rem; font-weight:300; max-width: 500px; margin-left: auto; margin-right: auto;">Every partnership begins with a conversation. Let's discuss your vision, identify your bottlenecks, and build a custom strategy tailored to your exact needs.</p>
+      <a href="contact.html" class="btn-primary">Schedule a Free Consultation</a>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
