@@ -1,32 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | YazzMedia</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | YazzMedia</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0d14;
+  --bg2: #13131f;
+  --lavender: #9b93f0;
+  --white: #ffffff;
+  --muted: #8888aa;
+  --border: rgba(155,147,240,0.2);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:#e8e6f0;line-height:1.6;padding:6rem 6%;}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bottom:0.5px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:64px;backdrop-filter:blur(12px); margin-bottom: 4rem;}
+.nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--white);letter-spacing:0.04em;text-decoration:none;}
+.nav-logo span{color:var(--lavender);font-style:italic;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{text-decoration:none;font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;}
+.nav-links a:hover, .nav-links a.active{color:var(--lavender);}
+
+.contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; max-width: 1000px; margin: 0 auto; }
+.contact-heading{font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:var(--white);margin-bottom:1.5rem;}
+.contact-heading em{color:var(--lavender);font-style:italic;}
+.contact-sub{font-size:15px;color:var(--muted);line-height:1.8;font-weight:300;}
+.contact-details{display:flex;flex-direction:column;gap:1rem;}
+.contact-row{padding:20px;background:var(--bg2);border:0.5px solid var(--border);border-radius:4px;}
+.contact-label{font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:var(--muted);margin-bottom:4px;}
+.contact-val{font-size:18px;color:var(--white);text-decoration:none;font-weight:500;}
+.profile-img{width:100%; border-radius:8px; border:0.5px solid var(--border);}
+</style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">YAZZMEDIA<span>Marketing | Media | Branding</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="work.html">My Work</a></li>
-            <li><a href="hireme.html">Hire Me</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
-    <main class="container">
-        <h1>Let's Connect</h1>
-        <p>I look forward to working with you and being a part of what you're building. I'm excited to bring my skills to the table and make a real contribution.</p>
-        <div class="card" style="max-width: 500px; margin-top: 2rem;">
-            <h3>Contact Information</h3>
-            <p><strong>Email:</strong> <a href="mailto:contact@jhazzy.com" style="color: var(--accent-color); text-decoration: none;">contact@jhazzy.com</a></p>
-            <p><strong>Phone:</strong> 310-280-6315</p>
-            <p><strong>Location:</strong> Temecula, CA</p>
-        </div>
-    </main>
+
+<nav>
+  <a href="index.html" class="nav-logo">Yazz<span>Media</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="work.html">Work Examples</a></li>
+    <li><a href="hireme.html">Hire Me</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="contact-wrap">
+  <div>
+    <h2 class="contact-heading">Let's work<br><em>together.</em></h2>
+    <p class="contact-sub">I am available for freelance marketing projects, brand development, event production, and long-term consulting. Please feel free to reach out directly via phone or email to schedule your free consultation.</p>
+  </div>
+  
+  <div class="contact-details">
+    <div class="contact-row">
+      <div class="contact-label">Business Line</div>
+      <a href="tel:9512968664" class="contact-val">951-296-8664</a>
+    </div>
+    <div class="contact-row">
+      <div class="contact-label">Email</div>
+      <a href="mailto:contact@jhazzy.com" class="contact-val">contact@jhazzy.com</a>
+    </div>
+    <div class="contact-row">
+      <div class="contact-label">Location</div>
+      <div class="contact-val">Temecula, CA</div>
+    </div>
+    <img src="YazHeadshot.png" alt="Yasmine Holtz" class="profile-img" style="margin-top: 2rem;">
+  </div>
+</section>
+
 </body>
 </html>
