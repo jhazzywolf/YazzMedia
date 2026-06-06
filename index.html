@@ -28,7 +28,7 @@ body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--off-white);f
 nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bottom:0.5px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:64px;backdrop-filter:blur(12px);}
 .nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--white);letter-spacing:0.04em;text-decoration:none;}
 .nav-logo span{color:var(--lavender);font-style:italic;}
-.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links{display:flex;gap:2.5rem;list-style:none; flex-wrap: wrap; justify-content: center;}
 .nav-links a{text-decoration:none;font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;}
 .nav-links a:hover, .nav-links a.active{color:var(--lavender);}
 
@@ -60,6 +60,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bott
   .hero-text{padding:5rem 6% 3rem;}
   .hero-name{font-size:48px;}
   .hero-visual{height:400px;}
+  .nav-links { gap: 1rem; padding: 10px 0; }
+  .nav-links a { font-size: 10px; }
 }
 </style>
 </head>
@@ -98,14 +100,15 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bott
   </div>
 </section>
 
-</body>
-</html>
 <footer style="padding: 3rem 6%; border-top: 0.5px solid var(--border); text-align: center; color: var(--muted);">
   <div style="font-family:'Playfair Display',serif; font-size:18px; color:var(--white); margin-bottom: 0.5rem;">YazzMedia</div>
   <p style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem;">
     contact@jhazzy.com &nbsp;·&nbsp; 951-296-8664
   </p>
-  <p style="font-size: 10px; color: var(--border-dim); opacity: 0.6;">
+  <p style="font-size: 10px; color: #555; opacity: 0.6;">
     © 2026 Yasmine Holtz. Designed & coded by Yasmine Holtz.
   </p>
 </footer>
+
+</body>
+</html>
