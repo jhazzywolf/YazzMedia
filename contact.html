@@ -15,16 +15,17 @@
   --border: rgba(155,147,240,0.2);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Syne',sans-serif;background:var(--bg);color:#e8e6f0;line-height:1.6;padding:6rem 6%;}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:#e8e6f0;line-height:1.6;}
 
 nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bottom:0.5px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:64px;backdrop-filter:blur(12px); margin-bottom: 4rem;}
 .nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--white);letter-spacing:0.04em;text-decoration:none;}
 .nav-logo span{color:var(--lavender);font-style:italic;}
-.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links{display:flex;gap:2.5rem;list-style:none; flex-wrap: wrap; justify-content: center;}
 .nav-links a{text-decoration:none;font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;}
 .nav-links a:hover, .nav-links a.active{color:var(--lavender);}
 
-.contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; max-width: 1000px; margin: 0 auto; }
+.container { padding: 0 6%; }
+.contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; max-width: 1000px; margin: 0 auto 6rem auto; }
 .contact-heading{font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:var(--white);margin-bottom:1.5rem;}
 .contact-heading em{color:var(--lavender);font-style:italic;}
 .contact-sub{font-size:15px;color:var(--muted);line-height:1.8;font-weight:300;}
@@ -33,6 +34,12 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bott
 .contact-label{font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:var(--muted);margin-bottom:4px;}
 .contact-val{font-size:18px;color:var(--white);text-decoration:none;font-weight:500;}
 .profile-img{width:100%; border-radius:8px; border:0.5px solid var(--border);}
+
+@media(max-width:768px){
+  .contact-wrap { grid-template-columns: 1fr; gap: 3rem; }
+  .nav-links { gap: 1rem; padding: 10px 0; }
+  .nav-links a { font-size: 10px; }
+}
 </style>
 </head>
 <body>
@@ -48,33 +55,36 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bott
   </ul>
 </nav>
 
-<section class="contact-wrap">
-  <div>
-    <h2 class="contact-heading">Let's work<br><em>together.</em></h2>
-    <p class="contact-sub">I am available for freelance marketing projects, brand development, event production, and long-term consulting. Please feel free to reach out directly via phone or email to schedule your free consultation.</p>
-  </div>
-  
-  <div class="contact-details">
-    <div class="contact-row">
-      <div class="contact-label">Business Line</div>
-      <a href="tel:9512968664" class="contact-val">951-296-8664</a>
+<div class="container">
+  <section class="contact-wrap">
+    <div>
+      <h2 class="contact-heading">Let's work<br><em>together.</em></h2>
+      <p class="contact-sub">I am available for freelance marketing projects, brand development, event production, and long-term consulting. Please feel free to reach out directly via phone or email to schedule your free consultation.</p>
     </div>
-    <div class="contact-row">
-      <div class="contact-label">Email</div>
-      <a href="mailto:contact@jhazzy.com" class="contact-val">contact@jhazzy.com</a>
+    
+    <div class="contact-details">
+      <div class="contact-row">
+        <div class="contact-label">Business Line</div>
+        <a href="tel:9512968664" class="contact-val">951-296-8664</a>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label">Email</div>
+        <a href="mailto:contact@jhazzy.com" class="contact-val">contact@jhazzy.com</a>
+      </div>
+      <img src="YazHeadshot.png" alt="Yasmine Holtz" class="profile-img" style="margin-top: 2rem;">
     </div>
-    <img src="YazHeadshot.png" alt="Yasmine Holtz" class="profile-img" style="margin-top: 2rem;">
-  </div>
-</section>
+  </section>
+</div>
 
-</body>
-</html>
 <footer style="padding: 3rem 6%; border-top: 0.5px solid var(--border); text-align: center; color: var(--muted);">
   <div style="font-family:'Playfair Display',serif; font-size:18px; color:var(--white); margin-bottom: 0.5rem;">YazzMedia</div>
   <p style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem;">
     contact@jhazzy.com &nbsp;·&nbsp; 951-296-8664
   </p>
-  <p style="font-size: 10px; color: var(--border-dim); opacity: 0.6;">
+  <p style="font-size: 10px; color: #555; opacity: 0.6;">
     © 2026 Yasmine Holtz. Designed & coded by Yasmine Holtz.
   </p>
 </footer>
+
+</body>
+</html>
