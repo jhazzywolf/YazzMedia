@@ -4,147 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio & Resume | YazzMedia</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<nav>
-  <a href="index.html" class="nav-logo">Yazz<span>Media</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-    <li><a href="work.html">My Work</a></li>
-    <li><a href="hireme.html">Hire Me</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0d14;
+  --bg2: #13131f;
+  --bg3: #1a1a2a;
+  --lavender: #9b93f0;
+  --lavender-light: #c4bff7;
+  --lavender-dim: #3d3870;
+  --lavender-glow: rgba(155,147,240,0.12);
+  --white: #ffffff;
+  --off-white: #e8e6f0;
+  --muted: #8888aa;
+  --border: rgba(155,147,240,0.2);
+  --border-light: rgba(255,255,255,0.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--off-white);font-size:16px;line-height:1.6;}
 
-<div class="section-wrap fade-up d1">
-  <div class="section-inner">
-    <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem;">
-      <div style="flex:1;">
-        <h1 style="font-family:'Playfair Display',serif; font-size:48px; color:var(--white); margin-bottom:0.5rem; font-weight:400;">Professional <em style="color:var(--lavender); font-style:italic;">Overview.</em></h1>
-        <p style="font-size:14px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase;">Skills, Experience & Education</p>
-      </div>
-      <div style="display: flex; gap: 14px;">
-        <a href="Portfolio.pdf" target="_blank" class="btn-secondary">View PDF</a>
-        <a href="Portfolio.pdf" download class="btn-primary">Download PDF</a>
-      </div>
-    </div>
-  </div>
-</div>
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);border-bottom:0.5px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:64px;backdrop-filter:blur(12px);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--white);letter-spacing:0.04em;text-decoration:none;}
+.nav-logo span{color:var(--lavender);font-style:italic;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{text-decoration:none;font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover, .nav-links a.active{color:var(--lavender);}
 
-<div class="section-wrap fade-up d2" style="background:var(--bg2); padding-top: 4rem; padding-bottom: 4rem;">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">01</div>
-      <div class="section-title">Core Skills</div>
-      <div class="section-line"></div>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-item">Social Media Management</div>
-      <div class="skill-item">Meta Ads & Paid Advertising</div>
-      <div class="skill-item">Brand Strategy & Identity</div>
-      <div class="skill-item">Website Management (Wix, WP)</div>
-      <div class="skill-item">Email Marketing & Funnels</div>
-      <div class="skill-item">Content Creation & Scheduling</div>
-      <div class="skill-item">Video Production & Editing</div>
-      <div class="skill-item">Graphic Design (Canva)</div>
-      <div class="skill-item">Event Planning & Promotions</div>
-      <div class="skill-item">CRM Management & Lead Tracking</div>
-      <div class="skill-item">Client Communications</div>
-      <div class="skill-item">Analytics & Reporting</div>
-    </div>
-  </div>
-</div>
-
-<div class="section-wrap fade-up d3">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">02</div>
-      <div class="section-title">Experience & Brands</div>
-      <div class="section-line"></div>
-    </div>
-    <div class="exp-list">
-      
-      <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-date">2025 – 2026</div>
-          <div class="exp-company">Dream Cultivators</div>
-          <div class="exp-location">Remote</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-title">Digital Marketing Manager</div>
-          <div class="exp-desc">Managed the full digital marketing presence for a luxury women's wellness retreat brand. Built and executed Meta ad campaigns targeting segmented audiences, designed automated email nurture sequences from opt-in to registration, wrote promotional copy, and produced video ad campaigns to drive brand awareness.</div>
-        </div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-date">2021 – 2025</div>
-          <div class="exp-company">Wolf Wednesdays</div>
-          <div class="exp-location">Denver, CO</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-title">Founder & CEO</div>
-          <div class="exp-desc">Founded and built one of Denver's premier open mic platforms for hip-hop and R&B artists from the ground up. Independently managed all branding, social media, paid advertising (averaging 15k+ impressions per event), event logistics, vendor relationships, and secured multi-brand sponsorship development.</div>
-        </div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-date">2021 – 2023</div>
-          <div class="exp-company">Bright Future Media</div>
-          <div class="exp-location">Denver, CO</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-title">Social Media Manager</div>
-          <div class="exp-desc">Managed multi-platform social media strategy and content production for a Denver-based recording studio. Produced video and photo content, ran paid Meta ad campaigns for studio booking, and grew Instagram following by 40% while boosting average post engagement by 60% over a one-year period.</div>
-        </div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-date">2025</div>
-          <div class="exp-company">Wilson Creek Winery</div>
-          <div class="exp-location">Temecula, CA</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-title">Freelance Content Producer</div>
-          <div class="exp-desc">Collaborated with a family-owned winery team to produce a 7-episode branded content series. Responsibilities included creating detailed shot lists, leading on-camera interviews, filming B-roll, and developing a comprehensive content calendar and social media rollout strategy.</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="section-wrap fade-up d4" style="background:var(--bg2);">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">03</div>
-      <div class="section-title">Education</div>
-      <div class="section-line"></div>
-    </div>
-    <div class="exp-list">
-      
-      <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-date">Class of 2025 & 2026</div>
-          <div class="exp-company">Mt. San Jacinto College</div>
-          <div class="exp-location">Presidential Honor Roll</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-title">Degrees & Certifications</div>
-          <div class="exp-desc">
-            <p style="margin-bottom: 8px;"><strong>Degrees:</strong> Associate of Arts in Digital Media, Associate of Science in Business Administration.</p>
-            <p><strong>Certifications:</strong> E-Commerce, Small Business Entrepreneurship, Logistics Leadership, and Public Relations.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-</body>
-</html>
+/* BUTTONS */
+.btn-primary{display:inline-block;padding:12px 32px;background:var(--lavender);color:var(--bg);text-decoration:none;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:background 0.2s;}
+.btn-primary:hover{background:var(--lavender-light);}
+.btn-secondary{display:inline-block;padding:12px 32px;border:0.5px solid var(--border);color:var(--lavender);text-decoration:none;font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;transition:border-color 0.2s,color 0.2s;}
+.btn-secondary:hover{border-color:
